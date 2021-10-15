@@ -1,0 +1,20 @@
+# DSARC
+
+idstring "DSARC FL"
+get FILES BYTE
+
+getdstring DUMMY 0x07
+for i = 0 < FILES
+    getdstring NAME 0x28
+    get SIZE long
+    get OFFSET long
+
+    savepos TMP
+    goto OFFSET
+
+    getdstring SIGN 4
+
+    goto TMP
+
+    log NAME OFFSET SIZE
+next i
