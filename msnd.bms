@@ -16,10 +16,12 @@ MATH SSEQSIZE - SSEQOFFSET
 MATH SBNKSIZE - SBNKOFFSET
 MATH SWARSIZE - SWAROFFSET
 
-set DSEQNAME BASENAME
-set SSEQNAME BASENAME
-set SBNKNAME BASENAME
-set SWARNAME BASENAME
+get infilename basename
+
+set DSEQNAME infilename
+set SSEQNAME infilename
+set SBNKNAME infilename
+set SWARNAME infilename
 
 string DSEQNAME + ".dseq"
 string SSEQNAME + ".sseq"
